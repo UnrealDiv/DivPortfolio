@@ -93,20 +93,12 @@ scene.add(particles);
 
 
 
-
 let previousTime = 0;
 function animate(){
     const elapsedTime = clock.getElapsedTime();
     previousTime = elapsedTime;
     camera.position.y = -scrollY/window.innerHeight * objectDistance;
 
-
-    // const parralaxX = mouse.x;
-    // const parralaxY = mouse.y;
-
-
-    // cameraGroup.position.x = parralaxX*0.5;
-    // cameraGroup.position.y = -parralaxY*0.5;
 
 
 

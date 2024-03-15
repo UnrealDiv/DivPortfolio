@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
 
+
 const sizes = {
     width:window.innerWidth,
     height:window.innerHeight
@@ -10,7 +11,6 @@ const colors={
     material:0xffffff,
     light:0xffffff
 };
-
 
 
 const canvas = document.querySelector(".draw");
@@ -23,6 +23,7 @@ scene.add(camera);
 
 const material = new THREE.MeshToonMaterial({color:0xffffff});
 
+const material2 = new THREE.MeshToonMaterial({color:0xffffff,wireframe:true});
 
 window.addEventListener('resize',()=>{
     sizes.width = window.innerWidth;
@@ -59,9 +60,9 @@ camera.position.set(0,0,3);
 
 const clock = new THREE.Clock();
 
-const cube = new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshToonMaterial({color:colors.material,wireframe:false}));
+const cube = new THREE.Mesh(new THREE.BoxGeometry(1,1,1),material);
 const decahedronGeometry = new THREE.DodecahedronGeometry( 1, 3 );
-const decahedron = new THREE.Mesh(decahedronGeometry,material);
+const decahedron = new THREE.Mesh(decahedronGeometry,material2);
 const octahedronGeometry = new THREE.OctahedronGeometry( 1 );
 const octahedron = new THREE.Mesh(octahedronGeometry,material);
 
@@ -77,7 +78,7 @@ const objectDistance = 5;
 cube.position.set(2,-objectDistance*0,0);
 decahedron.position.set(-2,-objectDistance*1,0);
 octahedron.position.set(2,-objectDistance*2,0);
-octahedron.material.wireframe=false;
+
 
 
 const directionalLight = new THREE.DirectionalLight("#00ffff",3.0);
