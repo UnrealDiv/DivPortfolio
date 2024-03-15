@@ -166,9 +166,16 @@ margin-left: 500px;
 @media only screen and (max-width: 767px) {
     /* Adjustments for smaller screens */
     .panel {
-        
+       
         flex-direction: column;
         align-items: center;
+    }
+    .info{
+        padding: 0;
+        font-size: 12px;
+    }
+    .info:hover{
+        transform: scale(1,1);
     }
 
     .panel ul {
@@ -197,7 +204,7 @@ margin-left: 500px;
         width: 100%;
     }
     .infos {
-        font-size: 24px; 
+        font-size: 12px; 
         margin: 10px;
         padding: 20px; 
     }

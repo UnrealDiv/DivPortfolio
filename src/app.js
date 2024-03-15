@@ -101,12 +101,12 @@ function animate(){
     camera.position.y = -scrollY/window.innerHeight * objectDistance;
 
 
-    const parralaxX = mouse.x;
-    const parralaxY = mouse.y;
+    // const parralaxX = mouse.x;
+    // const parralaxY = mouse.y;
 
 
-    cameraGroup.position.x = parralaxX*0.5;
-    cameraGroup.position.y = -parralaxY*0.5;
+    // cameraGroup.position.x = parralaxX*0.5;
+    // cameraGroup.position.y = -parralaxY*0.5;
 
 
 
@@ -116,9 +116,9 @@ function animate(){
     //     mesh.rotation.z = elapsedTime*0.5;
     // });
 
-    particles.position.x = Math.sin(elapsedTime);
-    particles.position.y = Math.cos(elapsedTime);
-    particles.position.z = Math.cos(elapsedTime);
+    cameraGroup.position.x = Math.sin(elapsedTime);
+    cameraGroup.position.y = Math.cos(elapsedTime);
+    cameraGroup.position.z = Math.cos(elapsedTime);
     particlesGeometry.attributes.position.needsUpdate=true;
 
 renderer.render(scene,camera);
