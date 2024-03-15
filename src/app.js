@@ -20,7 +20,7 @@ links.forEach((x,i)=>{
 
 
 const textureLoader = new THREE.TextureLoader();
-const star = textureLoader.load("./star.png");
+const star = textureLoader.load("./public/star.png");
 
 const meshes = [cube,decahedron,octahedron];
 let currentSection = 0;
